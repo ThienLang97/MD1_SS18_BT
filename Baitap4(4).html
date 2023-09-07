@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [
+            {
+                name: "HTML",
+                complete: "false"
+            },
+            {
+                name: "CSS",
+                complete: "false"
+            },
+            {
+                name: "Basic of javascript",
+                complete: "false"
+            },
+            {
+                name: "Node package Manager",
+                complete: "false"
+
+            },
+            {
+                name: "Git",
+                complete: "false"
+            }
+        ]
+        
+        let text;
+        do {
+             text = prompt("Nhập C/R/U/D/E");
+            if (text == "C") {
+                let newname = {
+                    name: "Javascript Advance",
+                    complete: "true"
+                }
+                a.push(newname);
+                
+            }
+            
+            if (text == "R") {
+                console.log(a);
+            }
+            if (text == "U") {
+                let viTri = +prompt("Nhập vị trí khóa học");
+                if (viTri<a.length) {
+                    let newO = prompt("Nhập vào môn học muốn thay đổi");
+                    let newC = prompt("Nhập trạng thái mới");
+                    a[viTri].name = newO;
+                    a[viTri].complete = newC;
+                    
+                };
+                
+
+            }
+            if (text == "D") {
+                let viTri = prompt("Nhập số vị trí");
+                if (viTri < a.length) {
+                    a.splice(viTri,1);
+                    
+                }
+            }
+        } while (text != "E")
+    </script>
+</body>
+
+</html>
